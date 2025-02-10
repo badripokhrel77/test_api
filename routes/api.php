@@ -15,3 +15,4 @@ Route::get('/test',function(){
 Route::get('student',[StudentController::class,'list']);
 Route::post('add',[StudentController::class,'adduser']);
 Route::put('update',[StudentController::class,'updateuser']);
+Route::delete('delete/($id)',[StudentController::class,"deleteuser"]);

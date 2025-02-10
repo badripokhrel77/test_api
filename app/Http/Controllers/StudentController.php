@@ -44,4 +44,14 @@ class StudentController extends Controller
         }
        
     }
+
+    function deleteuser($id){
+        $user= User::destroy($id);
+        if($user){
+            return ["Result"=> "User is deletad Sucessfully"];
+        }
+        else{
+            return ["Result"=>" This user is not Deleted or Not Found!!"];
+        }
+    }
 }
